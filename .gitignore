@@ -1,0 +1,31 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+.mplconfig/
+
+# Local data (not for GitHub)
+extracted/
+styleclip_train_real_aug/
+
+# Generated manifests / features / analysis / model outputs
+train.csv
+val.csv
+test.csv
+features/
+analysis/
+results/
+
+# Logs
+*.log
