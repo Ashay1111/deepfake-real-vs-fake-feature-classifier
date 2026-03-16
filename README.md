@@ -19,8 +19,10 @@ Large local assets are intentionally excluded from Git:
 
 - Raw datasets (`extracted/`)
 - Augmented images (`styleclip_train_real_aug/`)
-- Generated CSVs and artifacts (`train.csv`, `features/`, `analysis/`, `results/`)
+- Generated manifests and large intermediate outputs (`train.csv`, `features/`)
 - Local virtual environment (`.venv/`)
+
+Selected `analysis/` and `results/` artifacts are committed so the GitHub page shows the final outputs directly.
 
 See `.gitignore` for full rules.
 
@@ -70,7 +72,43 @@ python final_test_eval.py
 - Test metrics:
   - F1 (fake): `0.8850`
   - ROC-AUC: `0.9458`
-  - Precision: `0.8791`
-  - Recall: `0.8911`
+- Precision: `0.8791`
+- Recall: `0.8911`
 
 Per-method performance details are written to `results/final_results.json` when the pipeline is run locally.
+
+## Results
+
+### Per-method performance (test set)
+
+| Method | F1 | AUC |
+|---|---:|---:|
+| CollabDiff | 1.000 | 1.000 |
+| StyleCLIP | 1.000 | 1.000 |
+| StarGAN v2 | 0.898 | 0.960 |
+| StarGAN | 0.653 | 0.696 |
+| **Overall** | **0.885** | **0.946** |
+
+![ROC curves](results/final_roc_curves.png)
+
+![Confusion matrices](results/final_confusion_matrices.png)
+
+### Feature importance
+
+All three models agree on the same core features: `low_high_ratio`, `residual_variance`, and `high_band_power`. Patch entropy features contributed very little and were dropped after ablation, which is why the final model uses a compact 10-feature set.
+
+![Feature importances](results/feature_importances_comparison.png)
+
+### Per-method signal separation
+
+The per-method heatmap shows why `stargan` is the hardest subset: most features separate weakly there, while `CollabDiff` and `StyleCLIP` separate strongly on frequency and residual cues.
+
+![Per-method separation](analysis/04_per_method_separation.png)
+
+### Exploratory analysis
+
+Global feature distributions and correlation structure are also included for inspection.
+
+![Feature distributions](analysis/01_feature_distributions.png)
+
+![Correlation matrix](analysis/03_correlation_matrix.png)
