@@ -1,0 +1,15 @@
+feature,importance
+low_high_ratio,0.4272152594251138
+residual_variance,0.25271667483646415
+high_band_power,0.0932538516921307
+radial_loglog_slope,0.061635783565324
+radial_loglog_intercept,0.04677312889088806
+autocorr_strength,0.023996968948697506
+near_center_energy,0.021939678240947093
+offcenter_energy,0.016933532010413945
+std_intensity,0.01578976952209027
+std_patch_entropy,0.012031894164736219
+mean_intensity,0.011922971023652192
+mean_patch_entropy,0.009497328420570045
+high_entropy_patch_ratio,0.005108991567492331
+num_clusters,0.00118416769147958

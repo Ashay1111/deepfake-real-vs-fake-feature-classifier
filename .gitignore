@@ -27,5 +27,24 @@ features/
 analysis/
 results/
 
+# Keep only selected analysis artifacts
+!analysis/
+analysis/*
+!analysis/01_feature_distributions.png
+!analysis/02_separation_scores.csv
+!analysis/03_correlation_matrix.png
+!analysis/04_per_method_separation.png
+
+# Keep only selected results artifacts
+!results/
+results/*
+!results/final_confusion_matrices.png
+!results/final_roc_curves.png
+!results/final_results.json
+!results/feature_importances_comparison.png
+!results/lr_coefficients.csv
+!results/rf_importances.csv
+!results/gb_importances.csv
+
 # Logs
 *.log

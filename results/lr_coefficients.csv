@@ -1,0 +1,15 @@
+feature,coefficient
+high_band_power,5.901348745695444
+radial_loglog_slope,2.281131205968016
+radial_loglog_intercept,2.0652474892293333
+near_center_energy,0.39375680952298653
+std_intensity,0.1660140333579682
+mean_intensity,0.14314730925043473
+mean_patch_entropy,0.04965725568921898
+std_patch_entropy,0.049390297032549796
+num_clusters,0.042930163981753706
+high_entropy_patch_ratio,0.011017954396849869
+offcenter_energy,0.008971531576296666
+autocorr_strength,-0.029936472431577734
+low_high_ratio,-0.6893040767857213
+residual_variance,-5.95708449282985

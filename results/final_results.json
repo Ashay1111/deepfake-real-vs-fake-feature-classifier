@@ -1,0 +1,54 @@
+{
+  "model": "GradientBoostingClassifier",
+  "features": [
+    "mean_intensity",
+    "std_intensity",
+    "residual_variance",
+    "autocorr_strength",
+    "offcenter_energy",
+    "near_center_energy",
+    "radial_loglog_slope",
+    "radial_loglog_intercept",
+    "high_band_power",
+    "low_high_ratio"
+  ],
+  "n_features": 10,
+  "test_f1": 0.885,
+  "test_auc": 0.9458,
+  "test_precision": 0.8791,
+  "test_recall": 0.8911,
+  "per_method": [
+    {
+      "method": "CollabDiff",
+      "f1": 1.0,
+      "auc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "n": 300
+    },
+    {
+      "method": "stargan",
+      "f1": 0.6534653465346535,
+      "auc": 0.6964687195892664,
+      "precision": 0.6449511400651465,
+      "recall": 0.6622073578595318,
+      "n": 598
+    },
+    {
+      "method": "starganv2",
+      "f1": 0.898360655737705,
+      "auc": 0.9601108155539122,
+      "precision": 0.8867313915857605,
+      "recall": 0.9102990033222591,
+      "n": 602
+    },
+    {
+      "method": "styleclip",
+      "f1": 1.0,
+      "auc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "n": 575
+    }
+  ]
+}
